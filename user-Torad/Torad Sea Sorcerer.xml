@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Torad Sea Sorcerer</name>
+		
+		<update version="1.0.0">
+			<file name="Torad Sea Sorcerer.xml" url="https://raw.githubusercontent.com/ToradDnD/Sea-Sorcerer/master/user-Torad/Torad Sea Sorcerer.xml" />
+		</update>
+	</info>
+	
+<!—Torad Sea Sorcery -->
+<element name="Torad Sea Sorcerer" id="ID_TORAD_ARCHETYPE_SEA_SORCERER" source="Daniel Variant: Subclasses" type="Archetype"><supports>Sorcerous Origin</supports><description>
+<p>The power of water is the strength of flexibility, resilience, and a relentless nature. Water parts to allow a ship to sail over it or a diver to plunge into it, but their passing leaves no mark. Water flowing down a mountain reaches the sea. It might bend and turn across valleys and down hillsides, but it slowly and steadily returns to the waves. Those whose souls are touched by the power of elemental water command a similar power.</p>
+<p class="indent">Your heritage ties to powerful creatures of the sea, such as nereids, the lords of the merfolk, and elemental powers. Like a river, you feel the call of the ocean. The call is ever present in your heart, and you are never completely at peace until you are near the sea.</p>
+<div element="ID_TORAD_ARCHETYPE_FEATURE_SEA_SORCERER_SOUL_OF_THE_SEA"/>
+<div element="ID_TORAD_ARCHETYPE_FEATURE_SEA_SORCERER_CURSE_OF_THE_SEA"/>
+<div element="ID_TORAD_ARCHETYPE_FEATURE_SEA_SORCERER_WATERY_DEFENSE"/>
+<div element="ID_TORAD_UA_ARCHETYPE_FEATURE_SEA_SORCERER_SHIFTING_FORM"/>
+<div element="ID_TORAD_UA_ARCHETYPE_FEATURE_SEA_SORCERER_WATER_SOUL"/>
+</description><sheet><description>Your heritage ties to powerful creatures of the sea.</description></sheet><rules><grant id="ID_TORAD_ARCHETYPE_FEATURE_SEA_SORCERER_SOUL_OF_THE_SEA" type="Archetype Feature" level="1"/><grant id="ID_TORAD_ARCHETYPE_FEATURE_SEA_SORCERER_CURSE_OF_THE_SEA" type="Archetype Feature" level="1"/><grant id="ID_TORAD_ARCHETYPE_FEATURE_SEA_SORCERER_WATERY_DEFENSE" type="Archetype Feature" level="6"/><grant id="ID_TORAD_ARCHETYPE_FEATURE_SEA_SORCERER_SHIFTING_FORM" type="Archetype Feature" level="14"/><grant id="ID_TORAD_ARCHETYPE_FEATURE_SEA_SORCERER_WATER_SOUL" type="Archetype Feature" level="18"/></rules></element><element name="Soul of the Sea" id="ID_TORAD_ARCHETYPE_FEATURE_SEA_SORCERER_SOUL_OF_THE_SEA" source=" Daniel Variant: Subclasses" type="Archetype Feature"><description>
+<p>At 1st level, your tie to the sea grants you the ability to breathe underwater, and you have a swim speed equal to your walking speed.</p></description>
+<sheet>
+<description>You can breathe underwater and you have a swimming speed of {{speed}} feet.</description>
+</sheet>
+<rules>
+<stat name="speed:swim" value="speed" bonus="base"/></rules>
+</element>
+<element name="Curse of the Sea" id="ID_TORAD_ARCHETYPE_FEATURE_SEA_SORCERER_CURSE_OF_THE_SEA" source=" Daniel Variant: Subclasses " type="Archetype Feature"><description>
+<p>When you choose this origin at 1st level, you learn the secret of infusing your spells with a watery curse.</p>
+<p class="indent">When you hit a creature is damaged by one of your cantrips or when a creature fails a saving throw against your cantrip, you can curse the target until the end of your next turn.</p>
+<p class="indent">When you cast a spell that deals lightning, thunder or cold damage or forces the target to move, you can trigger the curse. Doing so subjects the target to the appropriate additional effect below, and then the curse ends if the spell isn’t a cantrip (you choose the effect to use if more than one effect applies):</p>
+<ul>
+•	<li>
+<p class="emphasis">Cold Damage: </p>
+<p>If the affected target takes cold damage from your spell, the target’s speed is also reduced by 15 feet until the end of your next turn. If the spell already reduces the target’s speed, it gets reduced by an additional 10 feet.</p>
+</li>
+•	<li>
+<p class="emphasis">Lightning or Thunder Damage: </p>
+<p>If the affected target takes lightning or thunder damage from your spell, the target takes additional damage of that type equal to your Charisma modifier.</p>
+</li>
+•	<li>
+<p class="emphasis">Forced Movement: </p>
+<p>If the target is moved by your spell, increase the distance it is moved by 15 feet.</p>
+</li>
+</ul>
+</description><sheet><description> When you hit a creature is damaged by one of your cantrips or when a creature fails a saving throw against your cantrip, you can curse the target until the end of your next turn. When you cast a spell that deals lightning, thunder or cold damage or forces the target to move, you can trigger the curse. Doing so subjects the target to the appropriate additional effect below, and then the curse ends if the spell isn’t a cantrip (you choose the effect to use if more than one effect applies): 1.Cold Damage: If the affected target takes cold damage from your spell, the target's speed is also reduced by 15 feet until the end of your next turn. If the spell already reduces the target's speed, it is reduced by an additional 10 feet. 2.Lightning or Thunder Damage: If the affected target takes lightning or thunder damage from your spell, the target takes an additional {{charisma:modifier}} damage of that type. 3.Forced Movement: If the target is moved by your spell, increase the distance it is moved by 15 feet. </description></sheet><rules> </rules>
+</element>
+<element name="Watery Defense" id="ID_TORAD_ARCHETYPE_FEATURE_SEA_SORCERER_WATERY_DEFENSE" source=" Daniel Variant: Subclasses " type="Archetype Feature"><description>
+<p>At 6th level, you gain resistance to fire damage. You also gain the ability to defend yourself by momentarily assuming a watery form. As a reaction when you are hit by an attack and take bludgeoning, piercing, or slashing damage from the attack, you can reduce that damage by an amount equal to your sorcerer level plus your Charisma modifier, and then you can move up to 30 feet without provoking opportunity attacks. Once you use this special reaction, you can't use it again until you finish a long rest or until you spend 3 Sorcery points to use it again.</p>
+</description><sheet><description> You gain resistance to fire damage. As a reaction when you are hit by an attack and take bludgeoning, piercing, or slashing damage from the attack, you can reduce that damage by {{watery defense}}, and then you can move up to 30 feet without provoking opportunity attacks. Once you use this special reaction, you can't use it again until you finish a long rest or until you spend 3 sorcery points to use it again. </description></sheet><rules><grant id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" type="Condition"/><stat name="watery defense" value="level:sorcerer"/><stat name="watery defense" value="charisma:modifier"/></rules></element><element name="Shifting Form" id="ID_TORAD_ARCHETYPE_FEATURE_SEA_SORCERER_DEEP WATER CURSE" source=" Daniel Variant: Subclasses " type="Archetype Feature"><description>
+<p>Starting at 14th level, you can channel greater power into your curses. When you trigger a curse of the sea you can spend 1 Sorcery point to apply an additional effect depending on the trigger you used: </p>
+<ul>
+•	<li>
+<p class="emphasis">Cold Damage: </p>
+<p>If the affected target takes cold damage from your spell, you can spend 1 sorcery point to force the target to make a constitution Saving throw against your spellsave DC. If it fails, its Armorclass is reduced by 2, they cannot use reactions, on its turn it can use an action or a bonus action but not both and when it takes the attack action it can make only one attack. These effects last until the end of your next turn.</p>
+</li>
+•	<li>
+<p class="emphasis">Lightning or Thunder Damage: </p>
+<p>If the affected target takes lightning or thunder damage from your spell, you can spend 1 sorcery point to deal lightning damage equal to half your sorcerer level to 3 creatures within 10 feet of the target</p>
+</li>
+•	<li>
+<p class="emphasis">Forced Movement: </p>
+<p>If the target is moved by your spell, you can spend 1 sorcery point to force the target to make an athletics or acrobatics check (its choice) against your spellsave DC or be knocked prone.</p>
+</li>
+</ul>
+</description><sheet><description> When you trigger a curse of the sea you can spend 1 Sorcery point to apply an additional effect depending on the trigger you used: 1.Cold Damage: If the affected target takes cold damage from your spell, you can spend 1 sorcery point to force the target to make a constitution Saving throw against your spellsave DC. If it fails, its Armorclass is reduced by 2, they cannot use reactions, on its turn it can use an action or a bonus action but not both and when it takes the attack action it can make only one attack. These effects last until the end of your next turn. 2.Lightning or Thunder Damage: If the affected target takes lightning or thunder damage from your spell, you can spend 1 sorcery point to deal {{level:sorcerer:half}} damage of that type to up to 3 creatures of your choice within 10 feet of the target 3. Forced Movement: If the target is moved by your spell, you can spend 1 sorcery point to force the target to make an athletics or acrobatics check (its choice) against your spellsave DC or be knocked prone.
+</description></sheet><rules> </rules>
+</element><element name="Water Soul" id="ID_TORAD_ARCHETYPE_FEATURE_SEA_SORCERER_CALL THE OCEAN" source=" Daniel Variant: Subclasses " type="Archetype Feature"><description>
+<p> Starting at 18th level, you can call forth the ocean at your will. As an action, you can spend 6 sorcery points to conjure a maelstrom of water in a 10ft radius around you that stays active for 1 Minute. If you are in a body of water when you use this ability, the radius is up to 30ft (your choice). As an action you can increase or reduce the radius of the maelstrom by up to10ft (Maximum of 60ft). The maelstrom is difficult terrain for any creatures of your choice. Any creature that enters the maelstrom or starts its turn there is immediately cursed by your Curse of the sea. In addition, you can use a bonus action to trigger one of the following effects (this can trigger your curse of the sea): 
+</p>
+<ul>
+<li>all creatures in the maelstrom have to succeed on a STR Save or be pushed 15ft in a direction of your choice. </li>
+<li>all creatures in the maelstrom must succeed on a CON Save or take 4d6 Cold Damage</li>
+<li>A creature within 60ft of you must succeed on a DEX Save or take 3d10 Lightning damage. If it is within the maelstrom it has disadvantage on the save.</li>
+</ul>
+</description><sheet><description> You can call forth the ocean at your will. As an action, you can spend 6 sorcery points to conjure a maelstrom of water in a 10ft radius around you that stays active for 1 Minute. If you are in a body of water when you use this ability, the radius is up to 30ft (your choice). As an action you can increase or reduce the radius of the maelstrom by up to10ft (Maximum of 60ft). The maelstrom is difficult terrain for any creatures of your choice. Any creature that enters the maelstrom or starts its turn there is immediately cursed by your Curse of the sea. In addition, you can use a bonus action to trigger one of the following effects (this can trigger your curse of the sea): 1. all creatures in the maelstrom have to succeed on a STR Save or be pushed 15ft in a direction of your choice. 2. All creatures in the maelstrom must succeed on a CON Save or take 4d6 Cold Damage 3. A creature within 60ft of you must succeed on a DEX Save or take 3d10 Lightning damage. If it is within the maelstrom it has disadvantage on the save.
+</description></sheet>
+
+	
+</elements>
