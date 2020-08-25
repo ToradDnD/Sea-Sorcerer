@@ -9,5 +9,6 @@
 	<files>
 		<file name="file1.xml" url="https://raw.githubusercontent.com/ToradDnD/Sea-Sorcerer/master/user-Torad/Torad Sea Sorcerer.xml" />
 		<file name="file2.xml" url="https://raw.githubusercontent.com/ToradDnD/Sea-Sorcerer/master/user-Torad/file2.xml" />
-	</files>
+		<file name="Elemental Soul.xml" url="https://raw.githubusercontent.com/ToradDnD/Sea-Sorcerer/master/user-Torad/Elemental Soul.xml" />
+	</files
 </index>
