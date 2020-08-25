@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Elemental Soul</name>
+		<update version="1.0.0">
+			<file name="file2.xml" url="https://raw.githubusercontent.com/ToradDnD/Sea-Sorcerer/master/user-Torad/Elemental Soul.xml" />
+		</update>
+	</info>
+	
+	</element>
+<element name="Elemental Soul" id="ID_TORAD_ARCHETYPE_SORCERER_ELEMENTAL_SOUL" source="Daniel Variant: Subclasses" type="Archetype"><supports>Sorcerous Origin</supports><description>
+<p>Touched by the elements themselves, Elemental souls command the powers of the elements at their whim, absorbing elements thrown at them and unleashing great power based on their current elemental power</p>
+<div element="ID_TORAD_ARCHETYPE_FEATURE_ELEMENTAL_SOUL_ELEMENTAL_REDIRECTION"/>
+<div element="ID_TORAD_ARCHETYPE_FEATURE_ELEMENTAL_SOUL_ELEMENTAL_FOCUS"/>
+<div element=" ID_TORAD_ARCHETYPE_FEATURE_ELEMENTAL_SOUL_ELEMENTAL_FOCUS "/>
+<div element="ID_TORAD_ARCHETYPE_FEATURE_ELEMENTAL_SOUL_FURY_OF_THE_ELEMENTS"/>
+<div element="ID_TORAD_ARCHETYPE_FEATURE_ELEMENTAL_SOUL_ELEMENTS_INCARNATED"/>
+</description><sheet><description>Your power comes from the strength of the elements.</description></sheet><rules><grant id=" ID_TORAD_ARCHETYPE_FEATURE_ELEMENTAL_SOUL_ELEMENTAL_REDIRECTION " type="Archetype Feature" level="1"/><grant id=" ID_TORAD_ARCHETYPE_FEATURE_ELEMENTAL_SOUL_ELEMENTAL_FOCUS " type="Archetype Feature" level="1"/><grant id=" ID_TORAD_ARCHETYPE_FEATURE_ELEMENTAL_SOUL_ELEMENTAL_FOCUS " type="Archetype Feature" level="6"/><grant id=" ID_TORAD_ARCHETYPE_FEATURE_ELEMENTAL_SOUL_FURY_OF_THE_ELEMENTS " type="Archetype Feature" level="14"/><grant id=" ID_TORAD_ARCHETYPE_FEATURE_ELEMENTAL_SOUL_ELEMENTS_INCARNATED " type="Archetype Feature" level="18"/></rules></element>
+<element name="Elemental redirection" id=" ID_TORAD_ARCHETYPE_FEATURE_ELEMENTAL_SOUL_ELEMENTAL_REDIRECTION " source="Daniel Variant: Subclasses" type="Archetype Feature"><description>
+<p>At 1st level you learn the absorb elements spell. It does not count against your number of spells known. In addition, you can cast it by spending 1 sorcery point or by expending a spell slot. If you cast it with sorcery points, the damage you take is reduced by an amount equal to your charisma modifier (after applying resistance gained by the spell) and the damage of the spell increases by an amount equal to your charisma modifier. </p>
+</description><sheet><description> You learn the absorb elements spell. It does not count against your number of spells known. In addition, you can cast it by spending 1 sorcery point or by expending a spell slot. If you cast it with sorcery points, the damage you take is reduced by {{Charisma:modifier}} (after applying resistance gained by the spell) and the damage of the spell increases by {{Charisma:modifier}}</description></sheet><rules> </rules></element><element name="Elemental Focus" id="ID_TORAD_ARCHETYPE_FEATURE_ELEMENTAL_SOUL_ELEMENTAL_FOCUS " source="Daniel Variant: Subclasses" type="Archetype Feature"><description>
+<p>At 1st level you can focus on an particular element in meditation. When you spend at least 30 Minutes in Meditation close to an element during a short or long rest you can focus on that element. 
+Once per turn when you deal damage of the type associated with your focus element one affected creature takes an additional 1d4 damage of that type. This damage increases when you reach certain levels in this class; 1d6 at 5th level, 1d8 at 10th level, 1d10 at 14th level and 1d12 at 18th level. 
+<table><thead>
+<tr>
+<td>Element</td>	<td>Assosiated Elemental Damage</td>
+<tr>
+<td>Fire</td>	<td>Fire, Radiant</td>
+<tr>
+<td>Earth</td>	<td>Acid, bludgeoning (if applied by earth or stone)</td>
+<tr>
+<td>Water</td>	<td>Cold, bludgeoning (if applied by water)</td>
+<tr>
+<td>Air</td>	<td>Lightning, Thunder</td>
+</description><sheet><description> You can focus on an particular element in meditation. When you spend at least 30 Minutes in Meditation close to an element during a short or long rest you can focus on that element. 
+Once per turn when you deal damage of the type associated with your focus element one affected creature takes an additional 1d{{Focus:dice}} damage of that type. This damage increases when you reach certain levels in this class; 1d6 at 5th level, 1d8 at 10th level, 1d10 at 14th level and 1d12 at 18th level. 
+<description/><sheet/><rules><stat name="Focus:dice" value="4" bonus="Elemental Focus"/><stat name="Focus:dice" level="6" value="6" bonus="Elemental Focus"/><stat name="Focus:dice" level="10" value="8" bonus="Elemental Focus"/><stat name="Focus:dice" level="14" value="10" bonus="Elemental Focus"/><stat name="Focus:dice" level="18" value="12" bonus="Elemental Focus"/> <rules></element><element name="Elemental Warrior" id="ID_TORAD_ARCHETYPE_FEATURE_ELEMENTAL_SOUL_ELEMENTAL WARRIOR source="Daniel Variant: Subclasses" type="Archetype Feature"><description>
+Starting at 6th level, whenever you deal the damage of your Elemental Focus feature you can spend 1 sorcery Point to subject the target to an additional effect depending on your focus element:
+<p class="indent"><b><i>Air.</i></b> You make a spellcasting modifier check contested by the enemies athletics or acrobatics (its choice). If you succeed you can knock the target prone or push it 10feet into a direction of your choice. </p>
+<p class="indent"><b><i>Earth.</i></b> Earth grabs for the target and holds it in place. The target must make a Dexterity Saving Throw. On a failure, its movement speed is reduced to 0 and it takes a -2 penalty to AC and Dexterity Saving Throws. These effects last until the end of your next turn.</p>
+<p class="indent"><b><i>Fire.</i></b> The target takes additional fire damage equal to your charisma modifier + ½ your sorcerer level</p>
+<p class="indent"><b><i>Water.</i></b> Icy Cold spreads into the targets veins. Its movement is reduced by 10 feet and it must make a constitution saving throw. On a fail it takes suffers disadvantage on the next Attack roll or saving throw it makes. These effects last until the end of your next turn</p>
+</description><sheet ><description> Whenever a creature takes damage from your Elemental Focus feature you can spend 1 Sorcery Point to subject the target to an additional effect depending on your focus Element:
+<p class="indent"><b><i>Air.</i></b> You make a spellcasting modifier check contested by the enemies athletics or acrobatics (its choice). If you succeed you can knock the target prone or push it 10feet into a direction of your choice. </p>
+<p class="indent"><b><i>Earth.</i></b> Earth grabs for the target and holds it in place. The target must make a Dexterity Saving Throw. On a failure, its movement speed is reduced to 0 and it takes a -2 penalty to AC and Dexterity Saving Throws. These effects last until the end of your next turn.</p>
+<p class="indent"><b><i>Fire.</i></b> The target takes additional fire damage equal to {{Fire:extra}}</p>
+<p class="indent"><b><i>Water.</i></b> Icy Cold spreads into the targets veins. It’s movement is reduced by 10 feet and it must make a constitution saving throw. On a fail it takes suffers disadvantage on the next Attack roll or saving throw it makes. These effects last until the end of your next turn. </p>
+
+<description/><sheet/>
+<rules> <stat name= "Fire:extra" value = "charisma:modifier"/>
+<stat name= "Fire:extra" value = "level:sorcerer:half"/>
+
+<rules/></element><element name="Fury of the Elements" id="ID_TORAD_ARCHETYPE_FEATURE_ELEMENTAL_SOUL_FURY OF THE ELEMENTS" source="Daniel Variants: Subclasses" type="Archetype Feature"><description>
+Beginning at 14th level, you gain resistance against the damage type associated with your current element and when you deal damage of that type you can use a bonus action to unleash that element around you
+	Fire: Every creature within 10ft of you must make a DEX Save or take 3d6 fire damage
+	Earth: Every creature within 10ft of you must make a STR Save or be knocked prone
+	Water: Every creature within 10ft of you must make a CON Save or have its 	movement speed reduced to 0 until the end of its next turn.	
+Air: Up to 3 creatures within 10 ft of you have to succeed on a DEX Save or take half your sorcerer Level in lightning damage or be knocked prone (their choice).
+</description><sheet><description> 
+You have resistance to the damage types associated with your focus element. 
+When you deal damage of one of these types you can use a bonus action to unleash that element around you
+	Fire: Every creature within 10ft of you must make a DEX Save or take 3d6 fire damage
+	Earth: Every creature within 10ft of you must make a STR Save or be knocked prone
+	Water: Every creature within 10ft of you must make a CON Save or have its 	movement speed reduced to 0 until the end of its next turn.	
+Air: Up to 3 creatures within 10 ft of you must succeed on a DEX Save or take half your sorcerer Level in lightning damage or be knocked prone (their choice).
+
+/></rules></element><element name="Elements incarnated" id="ID_TORAD_ARCHETYPE_FEATURE_ELEMENTAL_SOUL_ELEMENTS INCARNATED" source="Daniel Variants: Subclasses" type="Archetype Feature"><description>
+Beginning at 18th level, you are the incarnation of the elements. You are now focused on 2 elements at any given time. In addition, you gain additional boni based on the elements your currently focused on:
+Fire: When you deal fire damage on a turn, you can affect two targets with your Elemental 	Focus damage on that turn.
+Earth: You are immune to the proned condition and gain a burrow speed equal to your 	movement speed. You can decide to leave a tunnel behind if you use this that is wide 	enough for a creature equal to your size
+Air: You gain a fly speed equal to your walking speed and as a bonus action you can grant 	any creatures of your choice within 20ft of you a fly speed equal to their walking speed for 1 minute.
+Water: You gain a swim speed equal to two times your walking speed. As a bonus action you can grant any creatures of your choice within 20ft of you a swim speed equal to their walking speed for 1 minute. In addition, you can control the currents around you, making the water within 60ft of you difficult or easy terrain for every creature and vehicle of your choice. (Easy terrain cost a creature only 2.5 ft of movement for 5ft traveled).
+</description><sheet><description> You are the incarnation of the elements. You can now choose two elements to focus on whenever you finish a short or long rest. In addition, you gain additional boni based on the elements your currently focused on:
+Fire: When you deal fire damage on a turn, you can affect two targets with your Elemental Focus damage on that turn.
+Earth: You are immune to the proned condition and gain a burrow speed of {{speed}} ft. You can decide to leave a tunnel behind if you use this that is wide enough for a creature equal to your size or smaller.
+Air: You gain a fly speed equal to {{speed}} ft. and as a bonus action you can grant any creatures of your choice within 20ft of you a fly speed equal to their walking speed for 1 minute.
+Water: You gain a swim speed equal to {{speed:double}} ft. As a bonus action you can grant any creatures of your choice within 20ft of you a swim speed equal to their walking speed for one minute. In addition, you can control the currents around you, making the water within 60ft of you difficult or easy terrain for every creature and vehicle of your choice. (Easy terrain cost a creature only 2.5 ft of movement for 5ft traveled).
+</description></sheet><rules></rules></element>
+	
+</elements>
