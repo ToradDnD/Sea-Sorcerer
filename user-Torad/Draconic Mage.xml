@@ -11,24 +11,18 @@
 	<element name="Draconic Mage" type="Archetype" source="Daniel Variants" id="ID_TORAD_WIZARD_ARCHETYPE_DRACONIC MAGE">
 		<supports>Arcane Tradition</supports>
 		<description>
-			<p>Dragons are being of pure magic and therefore some wizards get heavily interested in them. Fascinated by the might of these majestic creatures, their flight and the devastation their breath weapons cause the Draconic Mage focuses all his studies to understand the dragon – how it fights, how to beat it, and how to emulate its fighting techniques using the arcane.
+			<p>Dragons are beings of pure magic and therefore some wizards get heavily interested in them. Fascinated by the might of these majestic creatures, their flight and the devastation their breath weapons cause the Draconic Mage focuses all his studies to understand the dragon – how it fights, how to beat it, and how to emulate its fighting techniques using the arcane.
 The Draconic mage adapts different aspects of the dragon over the course of his career. However, developing these dragon aspects takes a lot of magical power, and a human will never fully be able to adapt the powers of a dragon. 
 </p>
-			<div element="ID_TORAD_ARCHETYPE_DRACONIC_ASPCECTS" />
-			<div element="ID_WOTC_XGTE_ARCHETYPE_FEATURE_WAR_MAGIC_TACTICAL_WIT" />
-			<div element="ID_WOTC_XGTE_ARCHETYPE_FEATURE_WAR_MAGIC_POWER_SURGE" />
-			<div element="ID_WOTC_XGTE_ARCHETYPE_FEATURE_WAR_MAGIC_DURABLE_MAGIC" />
-			<div element="ID_WOTC_XGTE_ARCHETYPE_FEATURE_WAR_MAGIC_DEFLECTING_SHROUD" />
+			<div element="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECTS" />
+			
 		</description>
 		<sheet>
 			<description>Draconic mages strive to emulate the abilities of dragons for devastating results.</description>
 		</sheet>
 		<rules>
 			<grant type="Archetype Feature" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECTS" level="2"/>
-			<grant type="Archetype Feature" id="ID_WOTC_XGTE_ARCHETYPE_FEATURE_WAR_MAGIC_TACTICAL_WIT" level="2"/>
-			<grant type="Archetype Feature" id="ID_WOTC_XGTE_ARCHETYPE_FEATURE_WAR_MAGIC_POWER_SURGE" level="6"/>
-			<grant type="Archetype Feature" id="ID_WOTC_XGTE_ARCHETYPE_FEATURE_WAR_MAGIC_DURABLE_MAGIC" level="10"/>
-			<grant type="Archetype Feature" id="ID_WOTC_XGTE_ARCHETYPE_FEATURE_WAR_MAGIC_DEFLECTING_SHROUD" level="14"/>
+			
 		</rules>
 	</element>
 	<element name="Dragons Aspects" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECTS">
@@ -42,42 +36,44 @@ The Draconic mage adapts different aspects of the dragon over the course of his 
 		<sheet>
 			<description>You have {{aspectpoints:number}} aspect points. You can spend a maximum of {{aspectpoints:limit}} points on one dragon aspect.</description>
 		</sheet>
-		<rules><stat name="aspectpoints:number" value="level:wizard" /><stat name="roundup" value="level:wizard"/><stat name="roundup" value="1"/><stat name="aspectpoints:limit" value="roundup:half"/>
+		<rules><stat name="aspectpoints:number" value="level:wizard" /><stat name="aspectpoint:roundup" value="level:wizard"/><stat name="ascpectpoint:roundup" value="-level:wizard:half"/><stat name="aspectpoints:limit" value="level:wizard:half:up"/>
 		<select name="Dragons Aspect" type="Archetype Feature" level="1" number = "2" supports="Dragons Aspect"/>
 		<select name="Dragons Aspect" type="Archetype Feature" level="6" number = "1" supports="Dragons Aspect"/>
 		<select name="Dragons Aspect" type="Archetype Feature" level="10" number = "1" supports="Dragons Aspect"/>
-		<select name="Dragons Aspect" type="Archetype Feature" level="14" number = "1" supports="Dragons Aspect"/></rules>
+		<select name="Dragons Aspect" type="Archetype Feature" level="14" number = "1" supports="Dragons Aspect"/>
+		<select name="Aspect Points" type="Archetype Feature" number = "aspectpoints:number" supports="Aspect Points"/></rules>
 	</element>
 	<element name="Dragons flight" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRAGONS_FLIGHT"><supports>Dragons Aspect</supports>
 		<description>
 			<p>You strive to emulate the flight of the dragon. While dragons have wings, their flight is also supported by the magic that is part of their being – and you learn to absorb this magic
 You can use your action to give yourself a fly speed of 20ft for 1 minute and can’t do so again until you finish a short or long rest.
-<ln><strong>Improvements</strong></ln>
-<ln>•	<strong>1Point (max 4 times)</strong>: The flight speed gained increases by 20ft. </ln>
-<ln>•	<strong>1Point (max 3 times)</strong>: The duration increases to 10 minutes. If you choose this feature again it increases to 1 hour. If you choose it a 3rd time, the flightspeed becomes permanent.</ln>
+<p><strong>Improvements</strong></p>
+<li>	<strong>1Point (max 4 times)</strong>: The flight speed gained increases by 20ft. </li>
+<li>	<strong>1Point (max 3 times)</strong>: The duration increases to 10 minutes. If you choose this feature again it increases to 1 hour. If you choose it a 3rd time, the flightspeed becomes permanent.</li>
 </p>
 		</description>
-		<sheet action>
+		<sheet action="Action">
 			<description>You can use your action to give yourself a fly speed of 20ft for 1 minute and can’t do so again until you finish a short or long rest.
-<ln><strong>Improvements</strong></ln>
-<ln>•	<strong>1Point (max 4 times)</strong>: The flight speed gained increases by 20ft. </ln>
-<ln>•	<strong>1Point (max 3 times)</strong>: The duration increases to 10 minutes. If you choose this feature again it increases to 1 hour. If you choose it a 3rd time, the flightspeed becomes permanent.</ln></description>
+<li><strong>Improvements</strong></li>
+<li>•	<strong>1Point (max 4 times)</strong>: The flight speed gained increases by 20ft. </li>
+<li>•	<strong>1Point (max 3 times)</strong>: The duration increases to 10 minutes. If you choose this feature again it increases to 1 hour. If you choose it a 3rd time, the flightspeed becomes permanent.</li></description>
 		</sheet>
 		<rules>
+		
 		</rules>
 	</element>
 <element name="Dragons Breath" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRAGONS_BREATH"><supports>Dragons Aspect</supports>
 		<description>
-			You strive to emulate the devastation of the breath weapon of a dragon. Almost nothing compares to the destruction of an ancients dragons breath, even the mightiest magic is inferior to it. 
+			<p>You strive to emulate the devastation of the breath weapon of a dragon. Almost nothing compares to the destruction of an ancients dragons breath, even the mightiest magic is inferior to it. 
 You can use your action to deal 1d6 fire, cold, lightning, acid or poison damage in a 15ft cone or 30ft long 5ft wide line. You can’t use this feature again until you finish a short or long rest.
-<ln><strong>Improvements</strong></ln>
-<ln>•	<strong>1Point (max 1 time)</strong>: You can choose to expend a spellslot when you use this feature, increasing the damage by 2d6 per level of the spell slot. </ln>
-<ln>•	<strong>1Point (max 3 times)</strong>:  The base damage increases by 1d6. You cannot choose this feature a second time before you reach level 10 or a third time before you reach level 14.</ln>
-<ln>•	<strong>1Point (max 3 times)</strong>: When you have no uses of this feature left, at the start of each of your turns roll a d6. On a roll of 6 you can use this feature again. If you choose this feature again you regain it on a 5 or 6 and after choosing it again on a 4,5 or 6.</ln>
-<ln>•	<strong>1Point (max 3 times)</strong>: The range increases by 15ft cone and 30ft line. Once you choose this feature 3 times the width of the line increases to 10ft and the angle of the cone to 90degrees.</ln>
-		</description>
-		<sheet action>
-			You can use your action to deal 1d6 fire, cold, lightning, acid or poison damage in a 15ft cone or 30ft long 5ft wide line. You can’t use this feature again until you finish a short or long rest.
+<p><strong>Improvements</strong></p>
+<li>	<strong>1Point (max 1 time)</strong>: You can choose to expend a spellslot when you use this feature, increasing the damage by 2d6 per level of the spell slot. </li>
+<li>	<strong>1Point (max 3 times)</strong>:  The base damage increases by 1d6. You cannot choose this feature a second time before you reach level 10 or a third time before you reach level 14.</li>
+<li>	<strong>1Point (max 3 times)</strong>: When you have no uses of this feature left, at the start of each of your turns roll a d6. On a roll of 6 you can use this feature again. If you choose this feature again you regain it on a 5 or 6 and after choosing it again on a 4,5 or 6.</li>
+<li>	<strong>1Point (max 3 times)</strong>: The range increases by 15ft cone and 30ft line. Once you choose this feature 3 times the width of the line increases to 10ft and the angle of the cone to 90degrees.</li>
+		</p></description>
+		<sheet action="Action">
+			<description>You can use your action to deal 1d6 fire, cold, lightning, acid or poison damage in a 15ft cone or 30ft long 5ft wide line. You can’t use this feature again until you finish a short or long rest.
 <ln><strong>Improvements</strong></ln>
 <ln>•	<strong>1Point (max 1 time)</strong>: You can choose to expend a spellslot when you use this feature, increasing the damage by 2d6 per level of the spell slot. </ln>
 <ln>•	<strong>1Point (max 3 times)</strong>:  The base damage increases by 1d6. You cannot choose this feature a second time before you reach level 10 or a third time before you reach level 14.</ln>
@@ -88,22 +84,22 @@ You can use your action to deal 1d6 fire, cold, lightning, acid or poison damage
 		</rules>
 	</element>
 	<element name="Dragons Resilience" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRAGONS_RESILIENCE"><supports>Dragons Aspect</supports>
-		<description>
+		<description><p>
 			You strive to emulate the resilience and superior defense of a dragon. While dragons are strong and mighty because of their size, their inherent magic gives them additional defenses and the magic properties of draconic scales are powerful in their own right. You learned to weave some of the dragons defense into your own essence. 
 You can use a bonus action gain temporary hitpoints equal to your wizard level+ your intelligence modifier for up to one minute. Once you do so, you can’t use this feature again until you finish a short or long rest. 
-<ln><strong>Improvements</strong></ln>
-<ln>•	<strong>1point</strong>: While your dragon’s resilience is active, you gain +1 AC.</ln>
-<ln>•	<strong>1point (max 2 times)</strong>: The duration increases to 10 minutes, then to 1 hour.</ln>
-<ln>•	<strong>1point</strong>: you can use the feature an additional time between short or long rests.</ln>
-<ln>•	<strong>1point (max 5 times)</strong>: When you use the feature you also gain resistance to fire, cold, lightning, acid or poison damage while it is active (your choice whenever you activate dragon’s resilience). If you choose this feature again, you gain resistance to an additional damage type while the feature is active.</ln>
-<ln>•	<strong>2points (max 1 time)</strong>: When you use Dragon’s resilience you also gain resistance to nonmagical bludgeoning, piercing and slashing damage while it is active.</ln>
-<ln>•	<strong>1point (max 2 time)</strong>: The amount of temporary hitpoints you gain increases by ½ your wizard level + your intelligence modifier.</ln>
-<ln>•	<strong>1 point</strong>: While Dragon’s resilience is active you can use your bonus action to regain temporary hitpoints equal to your intelligence modifier (up to the maximum you had when you used the feature).</ln>
-
+<p><strong>Improvements</strong></p>
+<li>	<strong>1point</strong>: While your dragon’s resilience is active, you gain +1 AC.</li>
+<li>	<strong>1point (max 2 times)</strong>: The duration increases to 10 minutes, then to 1 hour.</li>
+<li>	<strong>1point</strong>: you can use the feature an additional time between short or long rests.</li>
+<li>	<strong>1point (max 5 times)</strong>: When you use the feature you also gain resistance to fire, cold, lightning, acid or poison damage while it is active (your choice whenever you activate dragon’s resilience). If you choose this feature again, you gain resistance to an additional damage type while the feature is active.</li>
+<li>	<strong>2points (max 1 time)</strong>: When you use Dragon’s resilience you also gain resistance to nonmagical bludgeoning, piercing and slashing damage while it is active.</li>
+<li>	<strong>1point (max 2 time)</strong>: The amount of temporary hitpoints you gain increases by ½ your wizard level + your intelligence modifier.</li>
+<li>	<strong>1 point</strong>: While Dragon’s resilience is active you can use your bonus action to regain temporary hitpoints equal to your intelligence modifier (up to the maximum you had when you used the feature).</li>
+</p>
 		</description>
-		<sheet action>
+		<sheet action="bonus action"><description>
 			You can use a bonus action gain temporary hitpoints equal to your wizard level+ your intelligence modifier for up to one minute. Once you do so, you can’t use this feature again until you finish a short or long rest. 
-<ln><strong>Improvements</strong></ln>
+<p><strong>Improvements</strong></p>
 <ln>•	<strong>1point</strong>: While your dragon’s resilience is active, you gain +1 AC.</ln>
 <ln>•	<strong>1point (max 2 times)</strong>: The duration increases to 10 minutes, then to 1 hour.</ln>
 <ln>•	<strong>1point</strong>: you can use the feature an additional time between short or long rests.</ln>
@@ -118,16 +114,16 @@ You can use a bonus action gain temporary hitpoints equal to your wizard level+ 
 	</element>
 	
 	<element name="Draconic Awe" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_AWE"><supports>Dragons Aspect</supports>
-		<description>
+		<description><p>
 			While dragons are majestic and invoke awe by their image alone, a lot of their impressive presence and influence on lesser minds comes from magic which you can emulate. As an action, you can choose 1 creature within 30ft of you and force it to make a wisdom saving throw against your spell save DC. If it fails it is frightened or charmed by you until the end of your next turn. You cannot use this feature on that creature again until you finish a short or long rest. 
-<ln><strong>Improvements</strong></ln>
-<ln>•	<strong>1Point (max 1 time)</strong>: The duration increases to 1 minute. Affected creatures can repeat their saving throw at the end of each of their turns. </ln>
-<ln>•	<strong>1Point (max 3 times)</strong>: The range increases by 30ft.</ln>
-<ln>•	<strong>1Point</strong>: The ability can target one additional creature.</ln>
-<ln>•	<strong>2Points (max 1 time)</strong>: You can use the ability as a bonus action.</ln>
-<ln>•	<strong>2Points</strong>: The saving throw becomes Charisma or Intelligence (your choice when you take this feature).</ln>
-		</description>
-		<sheet action>As an action, you can choose 1 creature within 30ft of you and force it to make a wisdom saving throw against your spell save DC. If it fails it is frightened or charmed by you until the end of your next turn. You cannot use this feature on that creature again until you finish a short or long rest. 
+<p><strong>Improvements</strong></p>
+<li>	<strong>1Point (max 1 time)</strong>: The duration increases to 1 minute. Affected creatures can repeat their saving throw at the end of each of their turns. </li>
+<li>	<strong>1Point (max 3 times)</strong>: The range increases by 30ft.</li>
+<li>	<strong>1Point</strong>: The ability can target one additional creature.</li>
+<li>	<strong>2Points (max 1 time)</strong>: You can use the ability as a bonus action.</li>
+<li>	<strong>2Points</strong>: The saving throw becomes Charisma or Intelligence (your choice when you take this feature).</li>
+		</p></description>
+		<sheet action="action"><description>As an action, you can choose 1 creature within 30ft of you and force it to make a wisdom saving throw against your spell save DC. If it fails it is frightened or charmed by you until the end of your next turn. You cannot use this feature on that creature again until you finish a short or long rest. 
 <ln><strong>Improvements</strong></ln>
 <ln>•	<strong>1Point (max 1 time)</strong>: The duration increases to 1 minute. Affected creatures can repeat their saving throw at the end of each of their turns. </ln>
 <ln>•	<strong>1Point (max 3 times)</strong>: The range increases by 30ft.</ln>
@@ -141,18 +137,18 @@ You can use a bonus action gain temporary hitpoints equal to your wizard level+ 
 	</element>
 	
 	<element name="Draconic knowledge" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE"><supports>Dragons Aspect</supports>
-		<description>
+		<description><p>
 			Dragons are mystic creatures, and there is so much to learn about how they shaped the world. You learn draconic (or another language if you already know it) and you gain proficiency in one knowledge skill (history, arcana, religion, nature) of your choice. In addition you are proficient and can double your proficiency bonus (=expertise) for any rolls that relate to recollecting knowledge about dragons.
-<ln><strong>Improvements</strong></ln>
-<ln>•	<strong>1 Point (max 3 times)</strong>: You gain proficiency in one knowledge skill.</ln>
-<ln>•	<strong>1 Point (max 4 times)</strong>: You gain expertise in 1 knowledge skill.</ln>
-<ln>•	<strong>1 Point (max 1 time)</strong>: Your research about dragons helps you in working together with them and understanding them. You gain advantage on any social checks in regard to dragons.</ln>
-<ln>•	<strong>1 Point</strong>: Your research about dragons physiology helps you both in helping and harming them. Whenever you use a healers kit on a wounded creature of the dragon type you can heal it for 1d6 hitpoints. Whenever you hit a creature of the dragon type the damage increases by 2.</ln>
-<ln>•	<strong>1 Point (max 2 times)</strong>: Your research about breath weapons allows you to counteract them. When you are affected by a breath weapon, after you roll the saving throw you can use your reaction to spend a spell slot of 1st level or higher. You gain a bonus to the saving throw equal to the level of the spell slot, and the damage you take is reduced by 5* the level of the spell slot.</ln>
-<ln>•	<strong>1 Point (max 4 times)</strong>: Your research about flying creatures allows you to fight them effectively. When you damage a creature with a fly speed its fly speed is reduced by 5ft for 1 hour if it fails a DEX Save against your spell save DC. A creature can only have his movement reduced by this feature once per turn. If you choose this feature again the reduction increases by 5ft and each creature can be affected one additional time per turn. </ln>
+<p><strong>Improvements</strong></p>
+<li>	<strong>1 Point (max 3 times)</strong>: You gain proficiency in one knowledge skill.</li>
+<li>	<strong>1 Point (max 4 times)</strong>: You gain expertise in 1 knowledge skill.</li>
+<li>	<strong>1 Point (max 1 time)</strong>: Your research about dragons helps you in working together with them and understanding them. You gain advantage on any social checks in regard to dragons.</li>
+<li>	<strong>1 Point</strong>: Your research about dragons physiology helps you both in helping and harming them. Whenever you use a healers kit on a wounded creature of the dragon type you can heal it for 1d6 hitpoints. Whenever you hit a creature of the dragon type the damage increases by 2.</li>
+<li>	<strong>1 Point (max 2 times)</strong>: Your research about breath weapons allows you to counteract them. When you are affected by a breath weapon, after you roll the saving throw you can use your reaction to spend a spell slot of 1st level or higher. You gain a bonus to the saving throw equal to the level of the spell slot, and the damage you take is reduced by 5* the level of the spell slot.</li>
+<li>	<strong>1 Point (max 4 times)</strong>: Your research about flying creatures allows you to fight them effectively. When you damage a creature with a fly speed its fly speed is reduced by 5ft for 1 hour if it fails a DEX Save against your spell save DC. A creature can only have his movement reduced by this feature once per turn. If you choose this feature again the reduction increases by 5ft and each creature can be affected one additional time per turn. </li>
 
-		</description>
-		<sheet action><description>You are proficient and can double your proficiency bonus (=expertise) for any rolls that relate to recollecting knowledge about dragons.
+	</p>	</description>
+		<sheet><description>You are proficient and can double your proficiency bonus (=expertise) for any rolls that relate to recollecting knowledge about dragons.
 <ln><strong>Improvements</strong></ln>
 <ln>•	<strong>1 Point (max 3 times)</strong>: You gain proficiency in one knowledge skill.</ln>
 <ln>•	<strong>1 Point (max 4 times)</strong>: You gain expertise in 1 knowledge skill.</ln>
@@ -164,9 +160,209 @@ You can use a bonus action gain temporary hitpoints equal to your wizard level+ 
 </description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID_ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_DRACONIC"/>
-			<grant type="Archetype Feature" id="ID_ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_OTHER_LANGUAGE"/>
-			<select name="Skill Proficiency (Draconic knowledge)" type="Proficiency" supports="Skill,(arcana||history||religion||nature)"/>
+		<select name="Language(Draconic Knowledge)" type="Language" supports="Standard||Exotic" default-behaviour="force" default="ID_LANGUAGE_DRACONIC"/>
+		<select name="Skill Proficiency (Draconic knowledge)" type="Proficiency" supports="ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_RELIGION|ID_PROFICIENCY_SKILL_NATURE"/>
 		</rules>
 	</element>
+	<element name="Draconic Knowledge(proficiency)" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_SKILL"> <requirements>ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE</requirements> <supports>Aspect Points</supports>
+		<description>
+		You gain proficiency in one knowledge skill.
+		</description>
+		<sheet display="false"></sheet>
+		<rules>
+			<select name="Skill Proficiency (Draconic knowledge)" type="Proficiency" supports="ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_RELIGION|ID_PROFICIENCY_SKILL_NATURE"/>
+		</rules>
+	</element>
+	
+	<element name="Draconic Knowledge(proficiency)" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_SKILL_2"> <requirements>ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_SKILL</requirements> <supports>Aspect Points</supports>
+		<description>
+		You gain proficiency in one knowledge skill.
+		</description>
+		<sheet display="false"></sheet>
+		<rules>
+			<select name="Skill Proficiency (Draconic knowledge)" type="Proficiency" supports="ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_RELIGION|ID_PROFICIENCY_SKILL_NATURE"/>
+		</rules>
+	</element>
+	
+	<element name="Draconic Knowledge(proficiency)" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_SKILL_3"> <requirements>ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_SKILL_2</requirements> <supports>Aspect Points</supports>
+		<description>
+		You gain proficiency in one knowledge skill.
+		</description>
+		<sheet display="false"></sheet>
+		<rules>
+			<select name="Skill Proficiency (Draconic knowledge)" type="Proficiency" supports="ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_RELIGION|ID_PROFICIENCY_SKILL_NATURE"/>
+		</rules>
+	</element>
+	
+		<element name="Draconic Knowledge(expertise)" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_EXPERTISE"> <requirements>ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE</requirements> <supports>Aspect Points</supports>
+		<description>
+		You gain expertise in one knowledge skill.
+		</description>
+		<sheet display="false"></sheet>
+		<rules>
+			<select name="Skill Proficiency (Draconic knowledge)" type="Archetype Feature" supports="Draconic knowledge expertise"/>
+		</rules>
+	</element>
+	
+	<element name="Draconic Knowledge(expertise)" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_EXPERTISE_2"> <requirements>ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_EXPERTISE</requirements> <supports>Aspect Points</supports>
+		<description>
+		You gain expertise in one knowledge skill.
+		</description>
+		<sheet display="false"></sheet>
+		<rules>
+			<select name="Skill Proficiency (Draconic knowledge)" type="Archetype Feature" supports="Draconic knowledge expertise"/>
+		</rules>
+	</element>
+	
+	<element name="Draconic Knowledge(expertise)" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_EXPERTISE_3"> <requirements>ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_EXPERTISE_2</requirements> <supports>Aspect Points</supports>
+		<description>
+		You gain expertise in one knowledge skill.
+		</description>
+		<sheet display="false"></sheet>
+		<rules>
+			<select name="Skill Proficiency (Draconic knowledge)" type="Archetype Feature" supports="Draconic knowledge expertise"/>
+		</rules>
+	</element>
+	
+	<element name="Draconic Knowledge(expertise)" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_EXPERTISE_4"> <requirements>ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_EXPERTISE_3</requirements> <supports>Aspect Points</supports>
+		<description>
+		You gain expertise in one knowledge skill.
+		</description>
+		<sheet display="false"></sheet>
+		<rules>
+			<select name="Skill Proficiency (Draconic knowledge)" type="Archetype Feature" supports="Draconic knowledge expertise"/>
+		</rules>
+	</element>
+	
+	<element name="Draconic Knowledge(Dragonspeaker)" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_DRAGON_SPEAKER"> <requirements>ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE</requirements> <supports>Aspect Points</supports>
+		<description>
+		Your research about dragons helps you in working together with them and understanding them. You gain advantage on any social checks in regard to dragons.
+		</description>
+		<sheet>You have advantage on any social checks in regard to dragons.</sheet>
+		<rules>
+		</rules>
+	</element>
+	
+	<element name="Draconic Knowledge(Physiology Knowledge)" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_PHYSIOLOGY_KNOWLEDGE"> <requirements>ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE</requirements> <supports>Aspect Points</supports>
+		<description>
+		Your research about dragons physiology helps you both in helping and harming them. Whenever you use a healers kit on a wounded creature of the dragon type you can heal it for 1d6 hitpoints. Whenever you hit a creature of the dragon type the damage increases by 2.
+		</description>
+		<sheet>Whenever you use a healers kit on a wounded creature of the dragon type you can heal it for {{physiology:healing}}d6 hitpoints. Whenever you hit a creature of the dragon type the damage increases by {{physiology:damage}}.</sheet>
+		<rules><stat name="physiology:healing" value="1"/><stat name="physiology:damage" value="2"/>
+		</rules>
+	</element>
+	<element name="Draconic Knowledge(Physiology Knowledge)" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_PHYSIOLOGY_KNOWLEDGE_2"> <requirements>ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_PHYSIOLOGY_KNOWLEDGE</requirements> <supports>Aspect Points</supports>
+		<description>
+		Your research about dragons physiology helps you both in helping and harming them. Whenever you use a healers kit on a wounded creature of the dragon type you can heal it for 1d6 hitpoints. Whenever you hit a creature of the dragon type the damage increases by 2.
+		</description>
+		<sheet display="false"/>
+		<rules><stat name="physiology:healing" value="1"/><stat name="physiology:damage" value="2"/>
+		</rules>
+	</element>
+	
+	<element name="Draconic Knowledge(Physiology Knowledge)" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_PHYSIOLOGY_KNOWLEDGE_3"> <requirements>ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_PHYSIOLOGY_KNOWLEDGE_2</requirements> <supports>Aspect Points</supports>
+		<description>
+		Your research about dragons physiology helps you both in helping and harming them. Whenever you use a healers kit on a wounded creature of the dragon type you can heal it for 1d6 hitpoints. Whenever you hit a creature of the dragon type the damage increases by 2.
+		</description>
+		<sheet display="false"/>
+		<rules><stat name="physiology:healing" value="1"/><stat name="physiology:damage" value="2"/>
+		</rules>
+	</element>
+	
+	<element name="Draconic Knowledge(Physiology Knowledge)" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_PHYSIOLOGY_KNOWLEDGE_4"> <requirements>ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_PHYSIOLOGY_KNOWLEDGE_3</requirements> <supports>Aspect Points</supports>
+		<description>
+		Your research about dragons physiology helps you both in helping and harming them. Whenever you use a healers kit on a wounded creature of the dragon type you can heal it for 1d6 hitpoints. Whenever you hit a creature of the dragon type the damage increases by 2.
+		</description>
+		<sheet display="false"/>
+		<rules><stat name="physiology:healing" value="1"/><stat name="physiology:damage" value="2"/>
+		</rules>
+	</element>
+	
+	<element name="Draconic Knowledge(Physiology Knowledge)" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_PHYSIOLOGY_KNOWLEDGE_5"> <requirements>ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_PHYSIOLOGY_KNOWLEDGE_4</requirements> <supports>Aspect Points</supports>
+		<description>
+		Your research about dragons physiology helps you both in helping and harming them. Whenever you use a healers kit on a wounded creature of the dragon type you can heal it for 1d6 hitpoints. Whenever you hit a creature of the dragon type the damage increases by 2.
+		</description>
+		<sheet display="false"/>
+		<rules><stat name="physiology:healing" value="1"/><stat name="physiology:damage" value="2"/>
+		</rules>
+	</element>
+	
+	<element name="Draconic Knowledge(Physiology Knowledge)" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_PHYSIOLOGY_KNOWLEDGE_6"> <requirements>ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_PHYSIOLOGY_KNOWLEDGE_5</requirements> <supports>Aspect Points</supports>
+		<description>
+		Your research about dragons physiology helps you both in helping and harming them. Whenever you use a healers kit on a wounded creature of the dragon type you can heal it for 1d6 hitpoints. Whenever you hit a creature of the dragon type the damage increases by 2.
+		</description>
+		<sheet display="false"/>
+		<rules><stat name="physiology:healing" value="1"/><stat name="physiology:damage" value="2"/>
+		</rules>
+	</element>
+	
+	<element name="Draconic Knowledge(Physiology Knowledge)" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_PHYSIOLOGY_KNOWLEDGE_7"> <requirements>ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_PHYSIOLOGY_KNOWLEDGE_6</requirements> <supports>Aspect Points</supports>
+		<description>
+		Your research about dragons physiology helps you both in helping and harming them. Whenever you use a healers kit on a wounded creature of the dragon type you can heal it for 1d6 hitpoints. Whenever you hit a creature of the dragon type the damage increases by 2.
+		</description>
+		<sheet display="false"/>
+		<rules><stat name="physiology:healing" value="1"/><stat name="physiology:damage" value="2"/>
+		</rules>
+	</element>
+	
+	<element name="Draconic Knowledge(Physiology Knowledge)" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_PHYSIOLOGY_KNOWLEDGE_8"> <requirements>ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_PHYSIOLOGY_KNOWLEDGE_7</requirements> <supports>Aspect Points</supports>
+		<description>
+		Your research about dragons physiology helps you both in helping and harming them. Whenever you use a healers kit on a wounded creature of the dragon type you can heal it for 1d6 hitpoints. Whenever you hit a creature of the dragon type the damage increases by 2.
+		</description>
+		<sheet display="false"/>
+		<rules><stat name="physiology:healing" value="1"/><stat name="physiology:damage" value="2"/>
+		</rules>
+	</element>
+	
+	<element name="Draconic Knowledge(Physiology Knowledge)" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_PHYSIOLOGY_KNOWLEDGE_9"> <requirements>ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_PHYSIOLOGY_KNOWLEDGE_8</requirements> <supports>Aspect Points</supports>
+		<description>
+		Your research about dragons physiology helps you both in helping and harming them. Whenever you use a healers kit on a wounded creature of the dragon type you can heal it for 1d6 hitpoints. Whenever you hit a creature of the dragon type the damage increases by 2.
+		</description>
+		<sheet display="false"/>
+		<rules><stat name="physiology:healing" value="1"/><stat name="physiology:damage" value="2"/>
+		</rules>
+	</element>
+	
+	<element name="Draconic Knowledge(Physiology Knowledge)" type="Archetype Feature" source="Daniel Variants" id="ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_PHYSIOLOGY_KNOWLEDGE_10"> <requirements>ID_TORAD_ARCHETYPE_FEATURE_DRACONIC_MAGE_DRAGONS_ASPECT_DRACONIC_KNOWLEDGE_PHYSIOLOGY_KNOWLEDGE_9</requirements> <supports>Aspect Points</supports>
+		<description>
+		Your research about dragons physiology helps you both in helping and harming them. Whenever you use a healers kit on a wounded creature of the dragon type you can heal it for 1d6 hitpoints. Whenever you hit a creature of the dragon type the damage increases by 2.
+		</description>
+		<sheet display="false"/>
+		<rules><stat name="physiology:healing" value="1"/><stat name="physiology:damage" value="2"/>
+		</rules>
+	</element>
+	
+	
+	
+<element name="Skill Expertise (Arcana)" id="ID_EXPERTISE_SKILL_ARCANA" source="Daniel Variants" type="Archetype Feature"><supports>Draconic knowledge expertise</supports><requirements>ID_PROFICIENCY_SKILL_ARCANA</requirements><description>
+<p>Your proficiency bonus is doubled for any Arcana check you make.</p>
+<div class="reference">
+<div element="ID_PROFICIENCY_SKILL_ARCANA"/>
+</div>
+</description><sheet display="false"/><rules><stat name="arcana:proficiency" value="proficiency" bonus="double"/></rules></element>
+
+
+<element name="Skill Expertise (History)" id="ID_EXPERTISE_SKILL_HISTORY" source="Daniel Variants" type="Archetype Feature"><supports>Draconic knowledge expertise</supports><requirements>ID_PROFICIENCY_SKILL_HISTORY</requirements><description>
+<p>Your proficiency bonus is doubled for any History check you make.</p>
+<div class="reference">
+<div element="ID_PROFICIENCY_SKILL_HISTORY"/>
+</div>
+</description><sheet display="false"/><rules><stat name="history:proficiency" value="proficiency" bonus="double"/></rules></element>
+
+
+<element name="Skill Expertise (Religion)" id="ID_EXPERTISE_SKILL_RELIGION" source="Daniel Variants" type="Archetype Feature"><supports>Draconic knowledge expertise</supports><requirements>ID_PROFICIENCY_SKILL_RELIGION</requirements><description>
+<p>Your proficiency bonus is doubled for any Religion check you make.</p>
+<div class="reference">
+<div element="ID_PROFICIENCY_SKILL_RELIGION"/>
+</div>
+</description><sheet display="false"/><rules><stat name="religion:proficiency" value="proficiency" bonus="double"/></rules></element>
+
+
+<element name="Skill Expertise (Nature)" id="ID_EXPERTISE_SKILL_NATURE" source="Daniel Variants" type="Archetype Feature"><supports>Draconic knowledge expertise</supports><requirements>ID_PROFICIENCY_SKILL_NATURE</requirements><description>
+<p>Your proficiency bonus is doubled for any Nature check you make.</p>
+<div class="reference">
+<div element="ID_PROFICIENCY_SKILL_NATURE"/>
+</div>
+</description><sheet display="false"/><rules><stat name="nature:proficiency" value="proficiency" bonus="double"/></rules></element>
+	
 </elements>
