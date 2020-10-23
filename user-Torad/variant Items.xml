@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Homebrew items</name>
+		<description></description>
+		<author>Daniel</author>
+		<update version="1.0">
+			<file name="variant Items.xml" url="hhttps://github.com/ToradDnD/Sea-Sorcerer/master/user-Torad/variant Items.xml" />
+		</update>
+	</info>
+	<element name="Dragon Slayer" type="Magic Item" source="Daniel Variants" id="ID_TORAD_MAGIC_ITEM_DRAGON_SLAYER_CROSSBOW">
+		<description>
+			<p>You gain a +1 bonus to attack and damage rolls made with this magic weapon.</p>
+			<p class="indent">When you hit a dragon with this weapon, the dragon takes an extra 3d6 damage of the weapon's type. For the purpose of this weapon, "dragon" refers to any creature with the dragon type, including dragon turtles and wyverns.</p>
+		</description>
+		<setters>
+			<set name="keywords">crossbow</set>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type">Weapon</set>
+			<set name="rarity">Rare</set>
+			<set name="enhancement">1</set>
+			<set name="weapon">ID_INTERNAL_WEAPON_GROUP_CROSSBOWS</set>
+		</setters>
+	</element>
+</elements>
